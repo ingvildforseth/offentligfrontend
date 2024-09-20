@@ -8,6 +8,14 @@
   --color-secondary-medium: 284, 40%, 50%;
   --color-secondary-dark: 284, 70%, 30%;
 
+  --size-xxs: 4px;
+  --size-xs: 8px;
+  --size-s: 16px;
+  --size-m: 24px;
+  --size-ml: 36px;
+  --size-l: 48px;
+  --size-xl: 96px;
+
   --font-weight-regular: 400;
   --font-weight-medium: 500;
 }
@@ -15,5 +23,41 @@
 html {
   font-family: Inter;
   font-weight: var(--font-weight-normal);
-  line-height: 1.3;
+  font-size: 16px;
+}
+
+/* 
+    Link styles:
+    Correct order is LoVeHAte (Link, Visited, Hover, Active) 
+    See https://forsethingvild.medium.com/helpful-css-acronyms-d16010e5dd5f#a51f
+*/
+a,
+a:visited {
+  color: hsl(var(--color-primary-medium));
+}
+
+a:hover {
+  color: hsl(var(--color-primary-dark));
+  text-decoration-style: dashed;
+}
+
+/* Original width was 280px, height was 372px */
+.logo svg {
+  margin: 0 auto;
+  height: 30vh;
+}
+
+.heading {
+  text-align: center;
+}
+
+.links_slack svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+hr {
+  border-top: 3px dashed hsl(var(--color-primary-medium));
+  width: 50vw;
+  margin: 0 auto;
 }
