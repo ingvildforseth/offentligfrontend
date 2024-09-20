@@ -72,3 +72,18 @@ a:hover {
   width: 2rem;
   height: 2rem;
 }
+
+/* Logo */
+.logo__letter-f,
+.logo__left {
+  color: hsl(var(--color-primary-medium));
+}
+
+.logo__top,
+.logo__bottom {
+  color: hsl(var(--color-primary-light));
+}
+
+.logo__letter-o {
+  color: hsl(var(--color-primary-dark));
+}
