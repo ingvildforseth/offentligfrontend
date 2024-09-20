@@ -1,7 +1,6 @@
 {
   "name": "offentligfrontend",
   "version": "1.0.0",
-  "type": "module",
   "description": "Webpage for the Norwegian Offentlig frontend network",
   "main": "index.js",
   "scripts": {
