@@ -35,6 +35,7 @@ body {
 h1,
 h2 {
   text-align: center;
+  margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
@@ -68,9 +69,14 @@ a:hover {
   height: 30vh;
 }
 
+.links {
+  margin-top: 2rem;
+}
+
 .links_slack svg {
   width: 2rem;
   height: 2rem;
+  margin: 0 auto;
 }
 
 /* Logo */
