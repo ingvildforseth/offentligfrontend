@@ -1,0 +1,19 @@
+:root {
+  --color-white: 0, 0%, 100%;
+  --color-black: 0, 0%, 0%;
+  --color-primary-light: 204, 90%, 85%;
+  --color-primary-medium: 204, 70%, 45%;
+  --color-primary-dark: 204, 89%, 26%;
+  --color-secondary-light: 284, 71%, 80%;
+  --color-secondary-medium: 284, 40%, 50%;
+  --color-secondary-dark: 284, 70%, 30%;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+}
+
+html {
+  font-family: Inter;
+  font-weight: var(--font-weight-normal);
+  line-height: 1.3;
+}

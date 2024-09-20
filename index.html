@@ -3,14 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/css/css-reset.css" />
+    <link rel="stylesheet" href="/css/of.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Offentlig frontend</title>
   </head>
 
   <body>
-    <div>
+    <div class="logo">
       <svg
-        class="logo"
         xmlns="http://www.w3.org/2000/svg"
         width="280"
         height="372"
@@ -36,7 +43,7 @@
     </div>
     <div>
       <h1 class="heading">Offentlig frontend</h1>
-      <p class="description">
+      <p class="ingress">
         Offentlig frontend er et nettverk for alle som jobber med frontend i
         offentlig sektor. Målet er å dele erfaringer og møtes på tvers av
         offentlige aktører. Nettverket ble startet som et initiativ fra NAV,
@@ -64,11 +71,12 @@
           <path
             fill="#ECB22E"
             d="M80.1 99.8c7.3 0 13.2 5.9 13.2 13.2 0 7.3-5.9 13.2-13.2 13.2-7.3 0-13.2-5.9-13.2-13.2V99.8h13.2zm0-6.6c-7.3 0-13.2-5.9-13.2-13.2 0-7.3 5.9-13.2 13.2-13.2h33.1c7.3 0 13.2 5.9 13.2 13.2 0 7.3-5.9 13.2-13.2 13.2H80.1z"
-          /></svg
-      ></a>
+          />
+        </svg>
+      </a>
     </div>
-    <div>
-      <div>Nettverket har deltagere fra</div>
+    <div class="contributors">
+      <div class="contributors_heading">Nettverket har deltagere fra</div>
       <a href="https://www.nav.no/">NAV</a>
       <a href="https://www.nrk.no/">NRK</a>
       <a
@@ -84,7 +92,7 @@
       <a href="https://www.nhn.no/">Norsk helsenett</a>
       <span>Deg?</span>
     </div>
-    <div>
+    <div class="description_theme">
       <p>
         Denne nettsiden har flere stiler: bruk stil-velgeren i høyre hjørne for
         å se nettsiden i ny drakt! Besøk oss gjerne på
