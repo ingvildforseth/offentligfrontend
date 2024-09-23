@@ -33,20 +33,14 @@ html {
   font-family: Inter, sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: 16px;
-  background-image: url("public/background.svg");
+  /* background-image: url("public/background.svg");
   background-color: var(--color-primary-medium);
-  background-repeat: no-repeat;
-  /* background-position: -4px -20px; */
-}
-
-body {
-  transform: translate(50px, 200px);
+  background-repeat: no-repeat; */
+  margin: var(--size-l);
 }
 
 main {
   max-width: 70ch;
-  padding-left: 2rem;
-  padding-right: 2rem;
   margin: 0 auto;
 }
 
@@ -76,8 +70,6 @@ footer::before {
 
 footer > * {
   max-width: 70ch;
-  padding-left: 2rem;
-  padding-right: 2rem;
   margin: 0 auto;
 }
 
@@ -125,14 +117,10 @@ a:hover {
   }
 }
 
-.logo {
-  display: none;
-}
-
-/* .logo svg {
+.logo svg {
   margin: 0 auto;
   height: 30vh;
-} */
+}
 
 .links {
   width: fit-content;

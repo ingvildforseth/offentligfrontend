@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 702 956" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 702 956" preserveAspectRatio="xMinYMin meet" fill="none">
     <path class="background__top" fill="#B6E0FB"
     d="
         M 697 3
@@ -8,7 +8,7 @@
         V 3
         Z
     "/>
-    <path class="background__right" fill="#2283C3" stroke="#2283C3" 
+    <path class="background__right" fill="#2283C3" 
     d="
         M 5 447.4 697 29
         v 920
@@ -16,12 +16,13 @@
         V 447.4
         Z
     "/>
-    <path class="background__left" fill="#074E7E" stroke="#074E7E" 
+    <path class="background__left" fill="#074E7E" 
     d="
         M 219 318 5 189.15
         V 949
         h 214
-        V 318Z
+        V 318
+        Z
     " />
     <g class="background__logo">
         <path
