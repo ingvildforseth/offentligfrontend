@@ -35,6 +35,10 @@ html {
   font-size: 16px;
 }
 
+/* body {
+  background-image: url("public/background.svg");
+} */
+
 main {
   max-width: 70ch;
   padding-left: 2rem;
