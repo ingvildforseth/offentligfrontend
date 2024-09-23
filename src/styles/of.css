@@ -9,6 +9,7 @@
   --color-secondary-medium: oklch(55.25% 0.167 316.18);
   --color-secondary-dark: oklch(284 40% 50%);
 
+  --size-xxxs: 2px;
   --size-xxs: 4px;
   --size-xs: 8px;
   --size-s: 16px;
@@ -35,7 +36,10 @@ html {
 }
 
 body {
-  padding: 2rem 2rem 5rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
   max-width: 70ch;
   margin: 0 auto;
 }
@@ -47,10 +51,10 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-hr {
-  border-top: 3px dashed var(--color-primary-medium);
-  width: 50vw;
-  margin: 1.5rem auto;
+footer {
+  margin-top: var(--size-l);
+  padding-top: var(--size-l);
+  border-top: 2px dotted var(--color-primary-medium);
 }
 
 p + p {
@@ -146,9 +150,11 @@ a:hover {
 
 .contributors__links {
   display: flex;
-  column-gap: calc(var(--size-xxs) / 2);
-  flex-wrap: wrap;
+  width: fit-content;
+  margin: 0 auto;
   place-content: center;
+  gap: var(--size-xxxs);
+  flex-wrap: wrap;
   text-transform: uppercase;
 }
 
