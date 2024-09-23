@@ -4,7 +4,7 @@ import Body from '../components/Body.astro';
 
 // Import your page's stylesheet here
 import '../styles/css-reset.css';
-import '../styles/of.css';
+import '../styles/nrk.css';
 ---
 
 <!doctype html>
@@ -12,12 +12,10 @@ import '../styles/of.css';
 	<head>
 		<BaseHead />
 		<!-- Add your page's assets here -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-		rel="stylesheet"
-		/>
+            rel="stylesheet"
+            href="https://static.nrk.no/nrk-sans/latest/nrk-sans.min.css"
+        />
 	</head>
 	<Body />
 </html>
