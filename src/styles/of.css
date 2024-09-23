@@ -146,24 +146,38 @@ a:hover {
 }
 
 .explanation a[href*="localghost"] {
+  --text-shadow-color-one: oklch(75.88% 0.264 329.46);
+  --text-shadow-color-two: oklch(67.06% 0.326 330.95);
   background: none;
   text-decoration: none;
   color: #fccffa;
-  text-shadow: 0 0 0 oklch(75.88% 0.264 329.46),
-    0 0 0 oklch(75.88% 0.264 329.46), 0 0 0 oklch(75.88% 0.264 329.46),
-    0 0 1px oklch(75.88% 0.264 329.46), 0 0 1px oklch(75.88% 0.264 329.46),
-    0 0 1px oklch(75.88% 0.264 329.46), 1px 0 20px oklch(75.88% 0.264 329.46),
-    1px 0 20px oklch(75.88% 0.264 329.46), 1px 0 20px oklch(75.88% 0.264 329.46),
-    1px 0 10px oklch(67.06% 0.326 330.95), 1px 0 10px oklch(67.06% 0.326 330.95),
-    1px 0 50px oklch(67.06% 0.326 330.95), 1px 0 50px oklch(67.06% 0.326 330.95);
+  text-shadow: 0 0 0 var(--text-shadow-color-one),
+    0 0 0 var(--text-shadow-color-one), 0 0 0 var(--text-shadow-color-one),
+    0 0 1px var(--text-shadow-color-one), 0 0 1px var(--text-shadow-color-one),
+    0 0 1px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 10px var(--text-shadow-color-two),
+    1px 0 10px var(--text-shadow-color-two),
+    1px 0 50px var(--text-shadow-color-two),
+    1px 0 50px var(--text-shadow-color-two);
 }
 
 .explanation a[href*="localghost"]:hover {
+  --text-shadow-color-one: #6ff67a;
+  --text-shadow-color-two: oklch(83.82% 0.326 143);
   color: #cffcd3;
-  text-shadow: 0 0 0 #6ff67a, 0 0 0 #6ff67a, 0 0 0 #6ff67a, 0 0 1px #6ff67a,
-    0 0 1px #6ff67a, 0 0 1px #6ff67a, 1px 0 20px #6ff67a, 1px 0 20px #6ff67a,
-    1px 0 20px #6ff67a, 1px 0 10px oklch(83.82% 0.326 143),
-    1px 0 10px oklch(83.82% 0.326 143), 1px 0 50px oklch(83.82% 0.326 143),
-    1px 0 50px oklch(83.82% 0.326 143);
+  text-shadow: 0 0 0 var(--text-shadow-color-one),
+    0 0 0 var(--text-shadow-color-one), 0 0 0 var(--text-shadow-color-one),
+    0 0 1px var(--text-shadow-color-one), 0 0 1px var(--text-shadow-color-one),
+    0 0 1px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 10px var(--text-shadow-color-two),
+    1px 0 10px var(--text-shadow-color-two),
+    1px 0 50px var(--text-shadow-color-two),
+    1px 0 50px var(--text-shadow-color-two);
   /* TODO: Should have other signifier than color that this is a link */
 }
