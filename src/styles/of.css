@@ -138,7 +138,11 @@ a:hover {
 }
 
 .contributors__links {
-  text-align: center;
+  display: flex;
+  column-gap: calc(var(--size-xxs) / 2);
+  flex-wrap: wrap;
+  place-content: center;
+  text-transform: uppercase;
 }
 
 .explanation a[href*="localghost"] {
