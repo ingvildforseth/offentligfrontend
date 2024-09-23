@@ -33,11 +33,15 @@ html {
   font-family: Inter, sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: 16px;
+  background-image: url("public/background.svg");
+  background-color: var(--color-primary-medium);
+  background-repeat: no-repeat;
+  /* background-position: -4px -20px; */
 }
 
-/* body {
-  background-image: url("public/background.svg");
-} */
+body {
+  transform: translate(50px, 200px);
+}
 
 main {
   max-width: 70ch;
@@ -87,7 +91,7 @@ p + p {
     See https://forsethingvild.medium.com/helpful-css-acronyms-d16010e5dd5f#a51f
 */
 a {
-  --link-color: var(--color-primary-medium);
+  --link-color: var(--color-black);
   --bg-height: 2px;
 
   text-decoration: none;
@@ -121,10 +125,14 @@ a:hover {
   }
 }
 
-.logo svg {
+.logo {
+  display: none;
+}
+
+/* .logo svg {
   margin: 0 auto;
   height: 30vh;
-}
+} */
 
 .links {
   width: fit-content;
