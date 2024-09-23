@@ -17,6 +17,13 @@
   --size-l: 48px;
   --size-xl: 96px;
 
+  --duration-xs: 0.125s;
+  --duration-s: 0.25s;
+  --duration-m: 0.5s;
+  --duration-l: 1s;
+  --duration-xl: 1.5s;
+  --duration-xxl: 2s;
+
   --font-weight-regular: 400;
   --font-weight-medium: 500;
 }
@@ -28,7 +35,7 @@ html {
 }
 
 body {
-  padding: 2rem;
+  padding: 2rem 2rem 5rem;
   max-width: 70ch;
   margin: 0 auto;
 }
@@ -72,7 +79,7 @@ a {
 }
 
 a:hover {
-  animation: link-anim 0.35s linear;
+  animation: link-anim var(--duration-s) linear;
   background-image: linear-gradient(
     90deg,
     var(--link-color),
@@ -119,7 +126,7 @@ a:hover {
 }
 
 .links__slack:hover svg {
-  animation: rotate 1.5s linear infinite;
+  animation: rotate var(--duration-xl) linear infinite;
 }
 
 /* Logo */
@@ -146,11 +153,13 @@ a:hover {
 }
 
 .explanation a[href*="localghost"] {
+  /* --text-shadow-color-one-original: oklch(75.88% 0.264 329.46);
+  --text-shadow-color-two-original: oklch(67.06% 0.326 330.95);
+  --text-color-original: #fccffa; */
   --text-shadow-color-one: oklch(75.88% 0.264 329.46);
   --text-shadow-color-two: oklch(67.06% 0.326 330.95);
-  background: none;
-  text-decoration: none;
-  color: #fccffa;
+  --text-color: #fccffa;
+  color: var(--text-color);
   text-shadow: 0 0 0 var(--text-shadow-color-one),
     0 0 0 var(--text-shadow-color-one), 0 0 0 var(--text-shadow-color-one),
     0 0 1px var(--text-shadow-color-one), 0 0 1px var(--text-shadow-color-one),
@@ -162,12 +171,19 @@ a:hover {
     1px 0 10px var(--text-shadow-color-two),
     1px 0 50px var(--text-shadow-color-two),
     1px 0 50px var(--text-shadow-color-two);
+  transition: color, text-shadow var(--duration-xs);
+  background: none;
 }
 
 .explanation a[href*="localghost"]:hover {
+  /* --text-shadow-color-one-original: #6ff67a;
+  --text-shadow-color-two-original: oklch(83.82% 0.326 143);
+  --text-color: #cffcd3; */
+
   --text-shadow-color-one: #6ff67a;
   --text-shadow-color-two: oklch(83.82% 0.326 143);
-  color: #cffcd3;
+  --text-color-original: #cffcd3;
+  color: var(--text-color);
   text-shadow: 0 0 0 var(--text-shadow-color-one),
     0 0 0 var(--text-shadow-color-one), 0 0 0 var(--text-shadow-color-one),
     0 0 1px var(--text-shadow-color-one), 0 0 1px var(--text-shadow-color-one),
