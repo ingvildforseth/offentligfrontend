@@ -153,12 +153,14 @@ a:hover {
 }
 
 .explanation a[href*="localghost"] {
-  /* --text-shadow-color-one-original: oklch(75.88% 0.264 329.46);
+  --text-color-original: #fccffa;
+  --text-shadow-color-one-original: oklch(75.88% 0.264 329.46);
   --text-shadow-color-two-original: oklch(67.06% 0.326 330.95);
-  --text-color-original: #fccffa; */
-  --text-shadow-color-one: oklch(75.88% 0.264 329.46);
-  --text-shadow-color-two: oklch(67.06% 0.326 330.95);
-  --text-color: #fccffa;
+
+  --text-color: var(--text-color-original);
+  --text-shadow-color-one: var(--text-shadow-color-one-original);
+  --text-shadow-color-two: var(--text-shadow-color-two-original);
+
   color: var(--text-color);
   text-shadow: 0 0 0 var(--text-shadow-color-one),
     0 0 0 var(--text-shadow-color-one), 0 0 0 var(--text-shadow-color-one),
@@ -176,13 +178,14 @@ a:hover {
 }
 
 .explanation a[href*="localghost"]:hover {
-  /* --text-shadow-color-one-original: #6ff67a;
-  --text-shadow-color-two-original: oklch(83.82% 0.326 143);
-  --text-color: #cffcd3; */
-
-  --text-shadow-color-one: #6ff67a;
-  --text-shadow-color-two: oklch(83.82% 0.326 143);
   --text-color-original: #cffcd3;
+  --text-shadow-color-one-original: #6ff67a;
+  --text-shadow-color-two-original: oklch(83.82% 0.326 143);
+
+  --text-color: var(--text-color-original);
+  --text-shadow-color-one: var(--text-shadow-color-one-original);
+  --text-shadow-color-two: var(--text-shadow-color-two-original);
+
   color: var(--text-color);
   text-shadow: 0 0 0 var(--text-shadow-color-one),
     0 0 0 var(--text-shadow-color-one), 0 0 0 var(--text-shadow-color-one),
