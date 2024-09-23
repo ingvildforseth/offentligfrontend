@@ -1,13 +1,13 @@
 :root {
-  /* Using the oklch color space, see https://oklch.com/ */
-  --color-white: 100% 3.5594404384177905e-8 106.37411429114086;
-  --color-black: 0% 0 0;
-  --color-primary-light: 88.52% 0.058 237.49;
-  --color-primary-medium: 58.66% 0.13 243.69;
-  --color-primary-dark: 41.07% 0.101 245.69;
-  --color-secondary-light: 80.41% 0.115 316.85;
-  --color-secondary-medium: 55.25% 0.167 316.18;
-  --color-secondary-dark: 284 40% 50%;
+  /* Why oklch color space? See https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl */
+  --color-white: oklch(100% 3.5594404384177905e-8 106.37411429114086);
+  --color-black: oklch(0% 0 0);
+  --color-primary-light: oklch(88.52% 0.058 237.49);
+  --color-primary-medium: oklch(58.66% 0.13 243.69);
+  --color-primary-dark: oklch(41.07% 0.101 245.69);
+  --color-secondary-light: oklch(80.41% 0.115 316.85);
+  --color-secondary-medium: oklch(55.25% 0.167 316.18);
+  --color-secondary-dark: oklch(284 40% 50%);
 
   --size-xxs: 4px;
   --size-xs: 8px;
@@ -41,7 +41,7 @@ h2 {
 }
 
 hr {
-  border-top: 3px dashed oklch(var(--color-primary-medium));
+  border-top: 3px dashed var(--color-primary-medium);
   width: 50vw;
   margin: 1.5rem auto;
 }
@@ -56,7 +56,7 @@ p + p {
     See https://forsethingvild.medium.com/helpful-css-acronyms-d16010e5dd5f#a51f
 */
 a {
-  --link-color: oklch(var(--color-primary-medium));
+  --link-color: var(--color-primary-medium);
   --bg-height: 2px;
 
   text-decoration: none;
@@ -76,7 +76,7 @@ a:hover {
   background-image: linear-gradient(
     90deg,
     var(--link-color),
-    oklch(var(--color-secondary-light))
+    var(--color-secondary-light)
   );
   background-position-x: left;
 }
@@ -125,16 +125,16 @@ a:hover {
 /* Logo */
 .logo__letter-f,
 .logo__left {
-  color: oklch(var(--color-primary-medium));
+  color: var(--color-primary-medium);
 }
 
 .logo__top,
 .logo__bottom {
-  color: oklch(var(--color-primary-light));
+  color: var(--color-primary-light);
 }
 
 .logo__letter-o {
-  color: oklch(var(--color-primary-dark));
+  color: var(--color-primary-dark);
 }
 
 .contributors__links {
