@@ -153,7 +153,7 @@ a:hover {
 }
 
 .explanation a[href*="localghost"] {
-  --text-color-original: #fccffa;
+  --text-color-original: oklch(90.6% 0.075 327.59);
   --text-shadow-color-one-original: oklch(75.88% 0.264 329.46);
   --text-shadow-color-two-original: oklch(67.06% 0.326 330.95);
 
@@ -178,8 +178,8 @@ a:hover {
 }
 
 .explanation a[href*="localghost"]:hover {
-  --text-color-original: #cffcd3;
-  --text-shadow-color-one-original: #6ff67a;
+  --text-color-original: oklch(94.88% 0.072 147.39);
+  --text-shadow-color-one-original: oklch(87% 0.203 145.07);
   --text-shadow-color-two-original: oklch(83.82% 0.326 143);
 
   --text-color: var(--text-color-original);
