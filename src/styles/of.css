@@ -71,15 +71,6 @@ a {
   background-size: 100% var(--bg-height);
 }
 
-@keyframes link-anim {
-  0% {
-    background-size: 0% var(--bg-height);
-  }
-  100% {
-    background-size: 100% var(--bg-height);
-  }
-}
-
 a:hover {
   animation: link-anim 0.35s linear;
   background-image: linear-gradient(
@@ -90,19 +81,45 @@ a:hover {
   background-position-x: left;
 }
 
+@keyframes link-anim {
+  0% {
+    background-size: 0% var(--bg-height);
+  }
+  100% {
+    background-size: 100% var(--bg-height);
+  }
+}
+
 .logo svg {
   margin: 0 auto;
   height: 30vh;
 }
 
 .links {
-  margin-top: 2rem;
+  width: fit-content;
+  margin: 2rem auto 0;
 }
 
 .links__slack svg {
   width: 2rem;
   height: 2rem;
   margin: 0 auto;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.links__slack:hover svg {
+  animation: rotate 1.5s linear infinite;
 }
 
 /* Logo */
