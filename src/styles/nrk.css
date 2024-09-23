@@ -1,13 +1,20 @@
 :root {
-  /* Why oklch color space? See https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl */
-  --color-white: oklch(100% 3.5594404384177905e-8 106.37411429114086);
-  --color-black: oklch(0% 0 0);
-  --color-primary-light: oklch(88.52% 0.058 237.49);
-  --color-primary-medium: oklch(58.66% 0.13 243.69);
-  --color-primary-dark: oklch(41.07% 0.101 245.69);
-  --color-secondary-light: oklch(80.41% 0.115 316.85);
-  --color-secondary-medium: oklch(55.25% 0.167 316.18);
-  --color-secondary-dark: oklch(284 40% 50%);
+  /* 
+    NRK color docs: https://static.nrk.no/core-design/latest/index.html?docs/tokens.md 
+    - Core blue: [50, 100, 200, 300, 400, 500, 600, 700, 750, 800, 900, 950]
+    - Red: [50, 100, 200, 300, 400, 450, 500, 600, 700, 800, 900, 950]
+    
+  */
+  --color-white: var(--nrk-color-core-blue-50);
+  --color-black: var(--nrk-color-core-blue-950);
+
+  --color-primary-light: var(--nrk-color-core-blue-100);
+  --color-primary-medium: var(--nrk-color-core-blue-400);
+  --color-primary-dark: var(--nrk-color-core-blue-750);
+
+  --color-secondary-light: var(--nrk-color-red-100);
+  --color-secondary-medium: var(--nrk-color-red-400);
+  --color-secondary-dark: var(--nrk-color-red-700);
 
   --size-xxxs: 2px;
   --size-xxs: 4px;
@@ -25,15 +32,40 @@
   --duration-xl: 1.5s;
   --duration-xxl: 2s;
 
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
+  /* See NRK Sans Variable font-variation-setting docs: https://static.nrk.no/nrk-sans/latest/index.html#font-variation-setting */
+  --font-weight-regular: var(--nrk-sans-weight-regular);
+  --font-weight-medium: var(--nrk-sans-weight-medium);
+
+  /* 
+    Already defined weight values
+    --nrk-sans-weight-hairline
+    --nrk-sans-weight-thin
+    --nrk-sans-weight-extralight
+    --nrk-sans-weight-light
+    --nrk-sans-weight-regular
+    --nrk-sans-weight-medium
+    --nrk-sans-weight-bold
+    --nrk-sans-weight-extrabold
+    --nrk-sans-weight-heavy
+    --nrk-sans-weight-black 
+
+    Already defined width: values:
+    --nrk-sans-width-regular
+    --nrk-sans-width-compressed
+    --nrk-sans-width-condensed
+    --nrk-sans-width-semi-condensed
+    --nrk-sans-width-extended
+    --nrk-sans-width-ultra-extended 
+  */
 }
 
 html {
+  /* NRK Sans Variable docs: https://static.nrk.no/nrk-sans/latest/index.html#usage */
   font-family: "NRK Sans Variable", sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: 16px;
   margin: var(--size-l);
+  background-color: var(--color-white);
 }
 
 main {
@@ -80,29 +112,14 @@ p + p {
     See https://forsethingvild.medium.com/helpful-css-acronyms-d16010e5dd5f#a51f
 */
 a {
-  --link-color: var(--color-black);
-  --bg-height: 2px;
-
   text-decoration: none;
-  color: var(--link-color);
-  background-image: linear-gradient(
-    90deg,
-    var(--link-color),
-    var(--link-color)
-  );
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  background-size: 100% var(--bg-height);
+  color: var(--color-black);
 }
 
 a:hover {
   animation: link-anim var(--duration-s) linear;
-  background-image: linear-gradient(
-    90deg,
-    var(--link-color),
-    var(--color-secondary-light)
-  );
-  background-position-x: left;
+  font-stretch: calc(var(--nrk-sans-width-ultra-extended) * 0.65%);
+  transition: font-stretch var(--duration-s) ease-out;
 }
 
 @keyframes link-anim {
