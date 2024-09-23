@@ -1,0 +1,224 @@
+:root {
+  /* Why oklch color space? See https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl */
+  --color-white: oklch(100% 3.5594404384177905e-8 106.37411429114086);
+  --color-black: oklch(0% 0 0);
+  --color-primary-light: oklch(88.52% 0.058 237.49);
+  --color-primary-medium: oklch(58.66% 0.13 243.69);
+  --color-primary-dark: oklch(41.07% 0.101 245.69);
+  --color-secondary-light: oklch(80.41% 0.115 316.85);
+  --color-secondary-medium: oklch(55.25% 0.167 316.18);
+  --color-secondary-dark: oklch(284 40% 50%);
+
+  --size-xxxs: 2px;
+  --size-xxs: 4px;
+  --size-xs: 8px;
+  --size-s: 16px;
+  --size-m: 24px;
+  --size-ml: 36px;
+  --size-l: 48px;
+  --size-xl: 96px;
+
+  --duration-xs: 0.125s;
+  --duration-s: 0.25s;
+  --duration-m: 0.5s;
+  --duration-l: 1s;
+  --duration-xl: 1.5s;
+  --duration-xxl: 2s;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+}
+
+html {
+  font-family: Inter, sans-serif;
+  font-weight: var(--font-weight-normal);
+  font-size: 16px;
+  /* background-image: url("public/background.svg");
+  background-color: var(--color-primary-medium);
+  background-repeat: no-repeat; */
+  margin: var(--size-l);
+}
+
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+footer {
+  margin-top: var(--size-l);
+  padding-top: var(--size-l);
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  border-top: 2px dotted var(--color-primary-medium);
+  margin: 0 auto;
+}
+
+footer > * {
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+/* 
+    Link styles:
+    Correct order is LoVeHAte (Link, Visited, Hover, Active) 
+    See https://forsethingvild.medium.com/helpful-css-acronyms-d16010e5dd5f#a51f
+*/
+a {
+  --link-color: var(--color-black);
+  --bg-height: 2px;
+
+  text-decoration: none;
+  color: var(--link-color);
+  background-image: linear-gradient(
+    90deg,
+    var(--link-color),
+    var(--link-color)
+  );
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% var(--bg-height);
+}
+
+a:hover {
+  animation: link-anim var(--duration-s) linear;
+  background-image: linear-gradient(
+    90deg,
+    var(--link-color),
+    var(--color-secondary-light)
+  );
+  background-position-x: left;
+}
+
+@keyframes link-anim {
+  0% {
+    background-size: 0% var(--bg-height);
+  }
+  100% {
+    background-size: 100% var(--bg-height);
+  }
+}
+
+.logo svg {
+  margin: 0 auto;
+  height: 30vh;
+}
+
+.links {
+  width: fit-content;
+  margin: 2rem auto 0;
+}
+
+.links__slack svg {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 auto;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.links__slack:hover svg {
+  animation: rotate var(--duration-xl) linear infinite;
+}
+
+/* Logo */
+.logo__letter-f,
+.logo__left {
+  color: var(--color-primary-medium);
+}
+
+.logo__top,
+.logo__bottom {
+  color: var(--color-primary-light);
+}
+
+.logo__letter-o {
+  color: var(--color-primary-dark);
+}
+
+.contributors__links {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  place-content: center;
+  gap: var(--size-xxxs);
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+
+.explanation a[href*="localghost"] {
+  --text-color-original: oklch(90.6% 0.075 327.59);
+  --text-shadow-color-one-original: oklch(75.88% 0.264 329.46);
+  --text-shadow-color-two-original: oklch(67.06% 0.326 330.95);
+
+  --text-color: var(--text-color-original);
+  --text-shadow-color-one: var(--text-shadow-color-one-original);
+  --text-shadow-color-two: var(--text-shadow-color-two-original);
+
+  color: var(--text-color);
+  text-shadow: 0 0 0 var(--text-shadow-color-one),
+    0 0 0 var(--text-shadow-color-one), 0 0 0 var(--text-shadow-color-one),
+    0 0 1px var(--text-shadow-color-one), 0 0 1px var(--text-shadow-color-one),
+    0 0 1px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 10px var(--text-shadow-color-two),
+    1px 0 10px var(--text-shadow-color-two),
+    1px 0 50px var(--text-shadow-color-two),
+    1px 0 50px var(--text-shadow-color-two);
+  transition: color, text-shadow var(--duration-xs);
+  background: none;
+}
+
+.explanation a[href*="localghost"]:hover {
+  --text-color-original: oklch(94.88% 0.072 147.39);
+  --text-shadow-color-one-original: oklch(87% 0.203 145.07);
+  --text-shadow-color-two-original: oklch(83.82% 0.326 143);
+
+  --text-color: var(--text-color-original);
+  --text-shadow-color-one: var(--text-shadow-color-one-original);
+  --text-shadow-color-two: var(--text-shadow-color-two-original);
+
+  color: var(--text-color);
+  text-shadow: 0 0 0 var(--text-shadow-color-one),
+    0 0 0 var(--text-shadow-color-one), 0 0 0 var(--text-shadow-color-one),
+    0 0 1px var(--text-shadow-color-one), 0 0 1px var(--text-shadow-color-one),
+    0 0 1px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 20px var(--text-shadow-color-one),
+    1px 0 10px var(--text-shadow-color-two),
+    1px 0 10px var(--text-shadow-color-two),
+    1px 0 50px var(--text-shadow-color-two),
+    1px 0 50px var(--text-shadow-color-two);
+  /* TODO: Should have other signifier than color that this is a link */
+}

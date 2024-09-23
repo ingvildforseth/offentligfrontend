@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Body from '../components/Body.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
 // Import your page's stylesheet here
 import '../styles/css-reset.css';
 import '../styles/of.css';
@@ -10,8 +10,8 @@ import '../styles/of.css';
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<!-- Add your page'stylesheet -->
+		<BaseHead />
+		<!-- Add your page's assets here -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
