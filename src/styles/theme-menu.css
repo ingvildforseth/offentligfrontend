@@ -6,7 +6,16 @@
   gap: var(--size-xs);
   list-style: none;
   place-items: center;
-  padding: var(--size-xs) var(--size-s);
+  padding: var(--size-s) var(--size-s);
+}
+
+.theme-menu a {
+  text-decoration: none;
+}
+
+.theme-menu a,
+.theme-menu a svg {
+  transition: transform var(--duration-s) linear;
 }
 
 .theme-menu svg {
@@ -14,9 +23,7 @@
   width: 2em;
 }
 
-.theme-menu a svg {
-  transition: transform var(--duration-s) linear;
-}
+/* CUSTOMIZATION */
 
 /* OF logo */
 .theme-menu a.theme-menu__of:hover svg {
@@ -25,10 +32,22 @@
 
 /* NRK logo */
 .theme-menu a.theme-menu__nrk svg {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .theme-menu a.theme-menu__nrk:hover svg {
   /* transform: scale(1.4); */
   transform: scaleY(-1);
+}
+
+/* Baerekraftig menu item */
+.theme-menu a.theme-menu__baerekraftig {
+  display: inline-block;
+  font-size: 24px;
+  transition-timing-function: cubic-bezier(0.63, 0.05, 0.69, 1.33);
+  transform-origin: bottom;
+}
+
+.theme-menu a.theme-menu__baerekraftig:hover {
+  transform: scaleY(1.4);
 }

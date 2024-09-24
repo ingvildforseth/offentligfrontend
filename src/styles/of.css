@@ -82,7 +82,7 @@ p + p {
     Correct order is LoVeHAte (Link, Visited, Hover, Active) 
     See https://forsethingvild.medium.com/helpful-css-acronyms-d16010e5dd5f#a51f
 */
-a {
+a:not(.theme-menu a) {
   --link-color: var(--color-black);
   --bg-height: 2px;
 
@@ -98,7 +98,7 @@ a {
   background-size: 100% var(--bg-height);
 }
 
-a:hover {
+a:not(.theme-menu a):hover {
   animation: link-anim var(--duration-s) linear;
   background-image: linear-gradient(
     90deg,
