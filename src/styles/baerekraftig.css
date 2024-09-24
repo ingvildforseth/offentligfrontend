@@ -44,19 +44,6 @@ h2 {
 
 footer {
   margin-top: var(--size-l);
-  padding-top: var(--size-l);
-  position: relative;
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 50%;
-  border-top: 2px dotted var(--color-primary-medium);
-  margin: 0 auto;
 }
 
 footer > * {
@@ -91,6 +78,9 @@ a:not(.theme-menu a):hover {
 
 .logo::before {
   content: "OF";
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
   font-size: 10rem;
 }
 
