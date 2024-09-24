@@ -122,42 +122,6 @@ a:not(.theme-menu a):hover {
   transition: font-stretch var(--duration-s) ease-out;
 }
 
-/* THEME MENU */
-.theme-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  gap: var(--size-xs);
-  list-style: none;
-  place-items: center;
-  padding: var(--size-xs) var(--size-s);
-}
-
-.theme-menu svg {
-  height: 2em;
-  width: 2em;
-}
-
-.theme-menu a svg {
-  transition: transform var(--duration-s) linear;
-}
-
-/* OF logo */
-.theme-menu a.theme-menu__of:hover svg {
-  transform: scaleX(-1);
-}
-
-/* NRK logo */
-.theme-menu a.theme-menu__nrk svg {
-  font-size: 18px;
-}
-
-.theme-menu a.theme-menu__nrk:hover svg {
-  /* transform: scale(1.4); */
-  transform: scaleY(-1);
-}
-
 /* LOGO */
 .logo svg {
   margin: 0 auto;
