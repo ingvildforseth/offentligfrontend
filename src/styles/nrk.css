@@ -139,12 +139,23 @@ a:not(.theme-menu a):hover {
   width: 2em;
 }
 
-.theme-menu a.theme-menu__of svg {
+.theme-menu a svg {
   transition: transform var(--duration-s) linear;
 }
 
+/* OF logo */
 .theme-menu a.theme-menu__of:hover svg {
   transform: scaleX(-1);
+}
+
+/* NRK logo */
+.theme-menu a.theme-menu__nrk svg {
+  font-size: 18px;
+}
+
+.theme-menu a.theme-menu__nrk:hover svg {
+  /* transform: scale(1.4); */
+  transform: scaleY(-1);
 }
 
 /* LOGO */
