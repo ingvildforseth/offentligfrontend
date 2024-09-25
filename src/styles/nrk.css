@@ -111,12 +111,12 @@ p + p {
     Correct order is LoVeHAte (Link, Visited, Hover, Active) 
     See https://forsethingvild.medium.com/helpful-css-acronyms-d16010e5dd5f#a51f
 */
-a:not(.theme-menu a, .explanation a) {
+a:not(.theme-menu a, .explanation__link-localghost) {
   text-decoration: none;
   color: var(--color-black);
 }
 
-a:not(.theme-menu a, .explanation a):hover {
+a:not(.theme-menu a, .explanation__link-localghost):hover {
   animation: link-anim var(--duration-s) linear;
   font-stretch: calc(var(--nrk-sans-width-ultra-extended) * 0.65%);
   transition: font-stretch var(--duration-s) ease-out;
@@ -184,7 +184,7 @@ a:not(.theme-menu a, .explanation a):hover {
 }
 
 /* EXPLANATION */
-.explanation a[href*="localghost"] {
+.explanation .explanation__link-localghost {
   --text-color-original: oklch(90.6% 0.075 327.59);
   --text-shadow-color-one-original: oklch(75.88% 0.264 329.46);
   --text-shadow-color-two-original: oklch(67.06% 0.326 330.95);
@@ -209,7 +209,7 @@ a:not(.theme-menu a, .explanation a):hover {
   background: none;
 }
 
-.explanation a[href*="localghost"]:hover {
+.explanation .explanation__link-localghost:hover {
   --text-color-original: oklch(94.88% 0.072 147.39);
   --text-shadow-color-one-original: oklch(87% 0.203 145.07);
   --text-shadow-color-two-original: oklch(83.82% 0.326 143);

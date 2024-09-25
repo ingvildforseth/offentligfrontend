@@ -7,7 +7,7 @@
   --color-primary-dark: oklch(41.07% 0.101 245.69);
   --color-secondary-light: oklch(80.41% 0.115 316.85);
   --color-secondary-medium: oklch(55.25% 0.167 316.18);
-  --color-secondary-dark: oklch(284 40% 50%);
+  --color-secondary-dark: oklch(39.05% 0.17 314.48);
 
   --size-xxxs: 2px;
   --size-xxs: 4px;
@@ -20,6 +20,7 @@
 
   --duration-xs: 0.125s;
   --duration-s: 0.25s;
+  --duration-sm: 0.375s;
   --duration-m: 0.5s;
   --duration-l: 1s;
   --duration-xl: 1.5s;
@@ -34,9 +35,15 @@ html {
   font-weight: var(--font-weight-normal);
   font-size: 16px;
   margin: var(--size-l);
+  background-color: oklch(from var(--color-secondary-light) l c h / 0.2);
   /* background-image: url("public/background.svg");
   background-color: var(--color-primary-medium);
   background-repeat: no-repeat; */
+}
+
+html,
+a {
+  color: var(--color-primary-dark);
 }
 
 main {
@@ -82,27 +89,22 @@ p + p {
     Correct order is LoVeHAte (Link, Visited, Hover, Active) 
     See https://forsethingvild.medium.com/helpful-css-acronyms-d16010e5dd5f#a51f
 */
-a:not(.theme-menu a) {
-  --link-color: var(--color-black);
-  --bg-height: 2px;
-
+a:not(.theme-menu a, .explanation__link-localghost, .links a) {
   text-decoration: none;
-  color: var(--link-color);
-  background-image: linear-gradient(
-    90deg,
-    var(--link-color),
-    var(--link-color)
-  );
+  padding: 0 var(--size-xxxs);
+  color: currentColor;
+  --bg-h: 100%;
+  background-image: none;
   background-position: 100% 100%;
   background-repeat: no-repeat;
-  background-size: 100% var(--bg-height);
+  background-size: 100% var(--bg-h);
 }
 
-a:not(.theme-menu a):hover {
-  animation: link-anim var(--duration-s) linear;
+a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
+  animation: link-anim var(--duration-sm) linear;
   background-image: linear-gradient(
     90deg,
-    var(--link-color),
+    var(--color-primary-light),
     var(--color-secondary-light)
   );
   background-position-x: left;
@@ -110,10 +112,10 @@ a:not(.theme-menu a):hover {
 
 @keyframes link-anim {
   0% {
-    background-size: 0% var(--bg-height);
+    background-size: 100% 0%;
   }
   100% {
-    background-size: 100% var(--bg-height);
+    background-size: 100% var(--bg-h);
   }
 }
 
@@ -176,7 +178,7 @@ a:not(.theme-menu a):hover {
   text-transform: uppercase;
 }
 
-.explanation a[href*="localghost"] {
+.explanation .explanation__link-localghost {
   --text-color-original: oklch(90.6% 0.075 327.59);
   --text-shadow-color-one-original: oklch(75.88% 0.264 329.46);
   --text-shadow-color-two-original: oklch(67.06% 0.326 330.95);
@@ -201,7 +203,7 @@ a:not(.theme-menu a):hover {
   background: none;
 }
 
-.explanation a[href*="localghost"]:hover {
+.explanation .explanation__link-localghost:hover {
   --text-color-original: oklch(94.88% 0.072 147.39);
   --text-shadow-color-one-original: oklch(87% 0.203 145.07);
   --text-shadow-color-two-original: oklch(83.82% 0.326 143);
