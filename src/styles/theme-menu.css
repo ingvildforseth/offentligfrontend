@@ -31,7 +31,19 @@
 }
 
 /* NRK logo */
+/*
+Some NRK colors: 
+  --nrk-color-core-blue-400: #649be2;
+  --nrk-color-core-blue-500: #3d81d8;
+  --nrk-color-core-blue-600: #1767ce;
+  --nrk-color-core-blue-700: #114f9d;
+  --nrk-color-core-blue-750: #073b84;
+  --nrk-color-core-blue-800: #0c366c;
+  --nrk-color-core-blue-900: #0a2343;
+  --nrk-color-core-blue-950: #061629; 
+*/
 .theme-menu a.theme-menu__nrk svg {
+  color: #0c366c;
   font-size: 19px;
 }
 
