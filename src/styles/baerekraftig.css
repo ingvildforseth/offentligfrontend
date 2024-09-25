@@ -64,11 +64,10 @@ a:not(.theme-menu a) {
   display: inline-block;
   margin: 0 var(--size-xxs);
   color: var(--color-black);
-  transition: transform var(--duration-s) linear;
 }
 
 a:not(.theme-menu a):hover {
-  transform: scale(1.15);
+  text-decoration: line-through;
 }
 
 /* LOGO */
