@@ -33,10 +33,10 @@ html {
   font-family: Inter, sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: 16px;
-  background-image: url("public/background.svg");
-  background-color: var(--color-primary-medium);
-  background-repeat: no-repeat;
   margin: var(--size-l);
+  /* background-image: url("public/background.svg");
+  background-color: var(--color-primary-medium);
+  background-repeat: no-repeat; */
 }
 
 main {
@@ -131,6 +131,12 @@ a:not(.theme-menu a):hover {
   width: 2rem;
   height: 2rem;
   margin: 0 auto;
+  animation: rotate var(--duration-xl) linear infinite;
+  animation-play-state: paused;
+}
+
+.links__slack:hover svg {
+  animation-play-state: running;
 }
 
 @keyframes rotate {
@@ -143,10 +149,6 @@ a:not(.theme-menu a):hover {
   100% {
     transform: rotate(1turn);
   }
-}
-
-.links__slack:hover svg {
-  animation: rotate var(--duration-xl) linear infinite;
 }
 
 /* Logo */
