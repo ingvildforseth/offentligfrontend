@@ -33,9 +33,9 @@ html {
   font-family: Inter, sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: 16px;
-  /* background-image: url("public/background.svg");
+  background-image: url("public/background.svg");
   background-color: var(--color-primary-medium);
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   margin: var(--size-l);
 }
 

@@ -36,7 +36,6 @@
 }
 
 .theme-menu a.theme-menu__nrk:hover svg {
-  /* transform: scale(1.4); */
   transform: scaleY(-1);
 }
 
@@ -44,10 +43,22 @@
 .theme-menu a.theme-menu__baerekraftig {
   display: inline-block;
   font-size: 24px;
-  transition-timing-function: cubic-bezier(0.63, 0.05, 0.69, 1.33);
-  transform-origin: bottom;
+  animation: rotate var(--duration-xl) linear infinite;
+  animation-play-state: paused;
 }
 
 .theme-menu a.theme-menu__baerekraftig:hover {
-  transform: scaleY(1.4);
+  animation-play-state: running;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }
