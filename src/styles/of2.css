@@ -31,8 +31,11 @@
 }
 
 html {
-  --page-margin: var(--size-l);
-  --page-divider: 50vw;
+  --content-margin: var(--size-m);
+  --page-divider: 25vw;
+
+  /* Logo CSS Custom Variabled */
+  --logo-margin-top: var(--size-l);
   --logo-height: 30vh;
   --logo-aspect-ratio: calc(280 / 372);
   --logo-width: calc(var(--logo-aspect-ratio) * var(--logo-height));
@@ -41,8 +44,8 @@ html {
   font-size: 16px;
   background: linear-gradient(
     90deg,
-    var(--color-primary-dark) 50%,
-    var(--color-primary-medium) 50%
+    var(--color-primary-dark) var(--page-divider),
+    var(--color-primary-medium) var(--page-divider)
   );
   background-color: var(--color-primary-light);
 }
@@ -54,13 +57,13 @@ a {
 
 html::after {
   --triangle-bg-color: var(--color-primary-light);
-  --triangle-height: calc(var(--page-margin) + 30vh * 0.3);
+  --triangle-height: calc(var(--logo-margin-top) + 30vh * 0.3);
   --triangle-width: var(--logo-width);
   --triangle-hypothenuse: var(--triangle-width);
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
+  left: var(--page-divider);
   transform: translateX(-50%);
   right: 0;
   width: 0;
@@ -72,12 +75,12 @@ html::after {
 }
 
 body {
-  margin: var(--page-margin);
 }
 
 main {
   max-width: 70ch;
-  margin: 0 auto;
+  margin-left: calc(var(--page-divider) + var(--content-margin));
+  margin-right: var(--content-margin);
 }
 
 h1,
@@ -146,6 +149,13 @@ a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
   100% {
     background-size: 100% var(--bg-h);
   }
+}
+
+.logo {
+  margin-top: var(--logo-margin-top);
+  width: fit-content;
+  margin-left: var(--page-divider);
+  transform: translateX(-50%);
 }
 
 .logo svg {
