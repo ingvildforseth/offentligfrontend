@@ -38,7 +38,7 @@ main {
 h1,
 h2 {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: var(--size-l);
   margin-bottom: 0.75rem;
 }
 
@@ -46,13 +46,21 @@ footer {
   margin-top: var(--size-l);
 }
 
-footer > * {
+footer > *,
+footer::after {
   max-width: 70ch;
   margin: 0 auto;
 }
 
+footer::after {
+  margin-top: var(--size-s);
+  display: block;
+  /* Blogg-artikkel: https://blogg.bekk.no/digitale-utslipp-og-b%C3%A6rekraftig-utvikling-68a3ea61b93a */
+  content: 'Nåværende stil er den vi har kalt "bærekraftig". Den er forsøkt levert med så lite CSS som mulig. Selvom den mest bærekraftige nettsiden er den som aldri blir laget ;). Inspirert av  Hans Kristian Henriksen, Bekk.';
+}
+
 p + p {
-  margin-top: 1rem;
+  margin-top: var(--size-s);
 }
 
 /* 
