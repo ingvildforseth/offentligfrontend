@@ -49,10 +49,10 @@ html {
 
 html,
 a {
-  color: var(--color-primary-dark);
+  color: var(--color-white);
 }
 
-html::before {
+html::after {
   --triangle-bg-color: var(--color-primary-light);
   --triangle-height: calc(var(--page-margin) + 30vh * 0.3);
   --triangle-width: var(--logo-width);
@@ -151,6 +151,7 @@ a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
 .logo svg {
   margin: 0 auto;
   height: var(--logo-height);
+  max-height: 250px;
 }
 
 .links {
