@@ -108,31 +108,28 @@ p {
 */
 a:not(.theme-menu a, .explanation__link-localghost, .links a) {
   text-decoration: none;
-  padding: 0 var(--size-xxxs);
-  color: currentColor;
-  --bg-h: 100%;
-  background-image: none;
-  background-position: 100% 100%;
-  background-repeat: no-repeat;
-  background-size: 100% var(--bg-h);
 }
 
 a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
-  animation: link-anim var(--duration-sm) linear;
+  animation: link-anim var(--duration-sm) linear forwards;
   background-image: linear-gradient(
-    90deg,
+    45deg,
     var(--color-primary-light),
-    var(--color-secondary-light)
+    var(--color-secondary-light),
+    var(--color-white)
   );
-  background-position-x: left;
+  background-repeat: no-repeat;
+  background-clip: text;
 }
 
 @keyframes link-anim {
   0% {
-    background-size: 100% 0%;
+    background-size: 0% 100%;
+    color: currentColor;
   }
   100% {
-    background-size: 100% var(--bg-h);
+    background-size: 100% 100%;
+    color: transparent;
   }
 }
 
@@ -202,6 +199,7 @@ a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
   gap: var(--size-xxxs);
   flex-wrap: wrap;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .explanation .explanation__link-localghost {
