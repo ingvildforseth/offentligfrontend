@@ -36,13 +36,15 @@ html {
 
   /* Logo CSS Custom Variables */
   --logo-margin-top: var(--size-l);
-  --logo-height: 30vh;
+  --logo-max-height: 250px;
+  --logo-height: min(30vh, var(--logo-max-height));
   --logo-aspect-ratio: calc(280 / 372);
   --logo-width: calc(var(--logo-aspect-ratio) * var(--logo-height));
 
   font-family: Inter, sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: 16px;
+  color: var(--color-white);
   background: linear-gradient(
     90deg,
     var(--color-primary-dark) var(--page-divider),
@@ -51,16 +53,13 @@ html {
   background-color: var(--color-primary-light);
 }
 
-html,
-a {
-  color: var(--color-white);
-}
-
 html::after {
   --triangle-bg-color: var(--color-primary-light);
-  --triangle-height: calc(var(--logo-margin-top) + 30vh * 0.3);
-  --triangle-width: var(--logo-width);
-  --triangle-hypothenuse: var(--triangle-width);
+  --triangle-height: calc(var(--logo-margin-top) + var(--logo-height) * 0.3);
+  --triangle-angle: 39deg;
+  --triangle-hypothenuse: calc(
+    var(--triangle-height) / sin(var(--triangle-angle))
+  );
   content: "";
   position: absolute;
   top: 0;
@@ -75,16 +74,21 @@ html::after {
   z-index: -1;
 }
 
-main,
-footer {
+main {
   max-width: 70ch;
   margin-left: calc(var(--page-divider) + var(--content-margin));
   margin-right: var(--content-margin);
+  margin-bottom: var(--size-l);
 }
 
 footer {
-  margin-top: var(--size-l);
-  margin-bottom: var(--size-xl);
+  padding-bottom: var(--size-l);
+  padding-left: calc(var(--page-divider) + var(--content-margin));
+  padding-right: var(--content-margin);
+}
+
+footer > * {
+  max-width: 70ch;
 }
 
 h1 {
@@ -116,6 +120,10 @@ p {
     Correct order is LoVeHAte (Link, Visited, Hover, Active) 
     See https://forsethingvild.medium.com/helpful-css-acronyms-d16010e5dd5f#a51f
 */
+a {
+  color: currentColor;
+}
+
 .theme-menu a,
 .contributors__links a,
 .explanation__link-localghost {
@@ -155,7 +163,8 @@ a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
 .logo svg {
   margin: 0 auto;
   height: var(--logo-height);
-  max-height: 250px;
+  width: var(--logo-width);
+  max-height: var(--logo-max-height);
 }
 
 .links {
@@ -207,7 +216,6 @@ a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
 .contributors__links {
   display: flex;
   width: fit-content;
-  margin: 0 auto;
   gap: var(--size-xxxs);
   flex-wrap: wrap;
   text-transform: uppercase;
