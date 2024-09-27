@@ -34,11 +34,12 @@ html {
   --content-margin: var(--size-m);
   --page-divider: 25vw;
 
-  /* Logo CSS Custom Variabled */
+  /* Logo CSS Custom Variables */
   --logo-margin-top: var(--size-l);
   --logo-height: 30vh;
   --logo-aspect-ratio: calc(280 / 372);
   --logo-width: calc(var(--logo-aspect-ratio) * var(--logo-height));
+
   font-family: Inter, sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: 16px;
@@ -74,46 +75,30 @@ html::after {
   z-index: -1;
 }
 
-body {
-}
-
-main {
+main,
+footer {
   max-width: 70ch;
   margin-left: calc(var(--page-divider) + var(--content-margin));
   margin-right: var(--content-margin);
 }
 
-h1,
-h2 {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-}
-
 footer {
   margin-top: var(--size-l);
-  padding-top: var(--size-l);
-  position: relative;
+  margin-bottom: var(--size-xl);
 }
 
-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 50%;
-  border-top: 2px dotted var(--color-primary-medium);
-  margin: 0 auto;
+h1 {
+  line-height: 1.4;
 }
 
-footer > * {
-  max-width: 70ch;
-  margin: 0 auto;
+h1,
+h2 {
+  margin-top: var(--size-m);
+  margin-bottom: var(--size-s);
 }
 
-p + p {
-  margin-top: 1rem;
+p {
+  margin-bottom: var(--size-s);
 }
 
 /* 
@@ -166,7 +151,7 @@ a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
 
 .links {
   width: fit-content;
-  margin: 2rem auto 0;
+  /* margin: 2rem auto 0; */
 }
 
 .links__slack svg {
@@ -214,7 +199,6 @@ a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
   display: flex;
   width: fit-content;
   margin: 0 auto;
-  place-content: center;
   gap: var(--size-xxxs);
   flex-wrap: wrap;
   text-transform: uppercase;
