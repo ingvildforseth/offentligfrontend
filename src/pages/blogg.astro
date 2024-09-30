@@ -24,7 +24,7 @@ const blogPosts = await getCollection('blog');
 		<h1>Blogg</h1>
 		<div class="blog-posts">
 		{blogPosts.map((post) => (
-			<a href={"/blog/" + post.slug} class="blog-posts__preview">
+			<a href={"/blogg/" + post.slug} class="blog-posts__preview">
 				<h2 class="blog-posts__preview-title">{post.data.title}</h2>
 				<p class="blog-posts__preview-body">{post.body}</p>
 			</a>
