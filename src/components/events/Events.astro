@@ -7,6 +7,8 @@ const allEvents = await getCollection('events');
 
 const currentEvents = allEvents.filter(event => new Date(event.data.date) > new Date());
 
+const hasCurrentEvents = currentEvents.length > 0;
+
 const MAX_PAST_EVENTS = 2;
 
 const pastEvents = allEvents.filter(event => new Date(event.data.date) < new Date()).slice(0, MAX_PAST_EVENTS);
@@ -14,11 +16,12 @@ const pastEvents = allEvents.filter(event => new Date(event.data.date) < new Dat
 
 <div class="events">
   <h2>Arrangementer</h2>
-  <p>Se vår <a
-    href="https://www.offentlig-frontend.slack.com"
-    >Slack-kanal
-  </a> for mer informasjon og påmelding.</p>
   <div class="events__current">
+  {hasCurrentEvents ? 
+    <p>Se vår <a
+      href="https://www.offentlig-frontend.slack.com"
+      >Slack-kanal
+    </a> for mer informasjon og påmelding.</p>
     <ul>
     {currentEvents.map(event => (
       <li>
@@ -26,7 +29,7 @@ const pastEvents = allEvents.filter(event => new Date(event.data.date) < new Dat
         <Event event={event} />
       </li>
     ))}
-    </ul>
+    </ul> : <p>Ingen arrangementer er planlagt for øyeblikket.</p>}
   </div>
   <div class="events__past">
     <h3>Tidligere arrangementer</h3>
@@ -38,6 +41,6 @@ const pastEvents = allEvents.filter(event => new Date(event.data.date) < new Dat
         </li>
       ))}
     </ul>
-    <p>Dette er noen av våre siste arrangementer. Ta en titt på <a href="/blog">bloggen</a> vår for mer informasjon om våre tidligere arrangementer.</p>
+    <p>Dette er noen av våre siste arrangementer. Ta en titt på <a href="/blog">bloggen</a> vår for mer informasjon om tidligere arrangementer.</p>
   </div>
 </div>
