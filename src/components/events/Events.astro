@@ -7,13 +7,17 @@ const allEvents = await getCollection('events');
 
 const currentEvents = allEvents.filter(event => new Date(event.data.date) > new Date());
 
-const MAX_PAST_EVENTS = 5;
+const MAX_PAST_EVENTS = 2;
 
 const pastEvents = allEvents.filter(event => new Date(event.data.date) < new Date()).slice(0, MAX_PAST_EVENTS);
 ---
 
 <div class="events">
   <h2>Arrangementer</h2>
+  <p>Se vår <a
+    href="https://www.offentlig-frontend.slack.com"
+    >Slack-kanal
+  </a> for mer informasjon og påmelding.</p>
   <div class="events__current">
     <ul>
     {currentEvents.map(event => (
@@ -34,5 +38,6 @@ const pastEvents = allEvents.filter(event => new Date(event.data.date) < new Dat
         </li>
       ))}
     </ul>
+    <p>Dette er noen av våre siste arrangementer. Ta en titt på <a href="/blog">bloggen</a> vår for mer informasjon om våre tidligere arrangementer.</p>
   </div>
 </div>

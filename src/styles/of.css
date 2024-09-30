@@ -270,3 +270,15 @@ a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
     1px 0 50px var(--text-shadow-color-two);
   /* TODO: Should have other signifier than color that this is a link */
 }
+
+/* EVENTS */
+ul {
+  margin-bottom: var(--size-xs);
+}
+
+.event__date {
+  font-size: 0.8em;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary-light);
+  margin-bottom: var(--size-xxxs);
+}
