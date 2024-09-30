@@ -150,7 +150,16 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		
+		"events": {
+"event-1.md": {
+	id: "event-1.md";
+  slug: "event-1";
+  body: string;
+  collection: "events";
+  data: any
+} & { render(): Render[".md"] };
+};
+
 	};
 
 	type DataEntryMap = {
