@@ -1,0 +1,38 @@
+---
+import Event from './Event.astro';
+
+import { getCollection } from 'astro:content';
+
+const allEvents = await getCollection('events');
+
+const currentEvents = allEvents.filter(event => new Date(event.data.date) > new Date());
+
+const MAX_PAST_EVENTS = 5;
+
+const pastEvents = allEvents.filter(event => new Date(event.data.date) < new Date()).slice(0, MAX_PAST_EVENTS);
+---
+
+<div class="events">
+  <h2>Arrangementer</h2>
+  <div class="events__current">
+    <ul>
+    {currentEvents.map(event => (
+      <li>
+        <h3>{event.data.title}</h3>
+        <Event event={event} />
+      </li>
+    ))}
+    </ul>
+  </div>
+  <div class="events__past">
+    <h3>Tidligere arrangementer</h3>
+    <ul>
+      {pastEvents.map((event) => (
+        <li>
+          <h4>{event.data.title}</h4>
+          <Event event={event} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
