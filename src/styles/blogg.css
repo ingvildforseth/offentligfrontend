@@ -1,0 +1,19 @@
+.blog-posts__preview {
+  display: block;
+  text-decoration: none;
+}
+
+.blog-posts__preview-title {
+  background: none;
+  color: var(--color-white);
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.blog-posts__preview-body {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}

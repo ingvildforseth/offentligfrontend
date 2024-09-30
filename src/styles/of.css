@@ -130,7 +130,7 @@ a {
   text-decoration: none;
 }
 
-a:not(.theme-menu a, .explanation__link-localghost, .links a):hover {
+a:not(.theme-menu a, .explanation__link-localghost, .links a, .blog a):hover {
   animation: link-anim var(--duration-sm) linear forwards;
   background-image: linear-gradient(
     45deg,

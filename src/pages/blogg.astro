@@ -1,9 +1,9 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import '../styles/of.css';
-import '../styles/blog.css';
+import '../styles/blogg.css';
 
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 const blogPosts = await getCollection('blog');
 ---
@@ -19,11 +19,15 @@ const blogPosts = await getCollection('blog');
 		rel="stylesheet"
 		/>
 	</head>
-	<main>
+	<main class="blog">
 		<h1>Blogg</h1>
+		<div class="blog-posts">
 		{blogPosts.map((post) => (
-			<h2>{post.data.title}</h2>
-			<div>{post.body}</div>
+			<a href="#" class="blog-posts__preview">
+				<h2 class="blog-posts__preview-title">{post.data.title}</h2>
+				<p class="blog-posts__preview-body">{post.body}</p>
+			</a>
 		))}
+		</a>
 	</main>
 </html>
