@@ -14,7 +14,17 @@ const eventsCollection = defineCollection({
   }),
 });
 
+const blogCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    publishedDate: z.string().transform((str) => new Date(str)),
+    author: z.string(),
+  }),
+});
+
 // Keys should match collection directory name in "src/content"
 export const collections = {
   events: eventsCollection,
+  blog: blogCollection,
 };

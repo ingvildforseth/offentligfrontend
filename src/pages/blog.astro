@@ -1,0 +1,29 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import '../styles/of.css';
+import '../styles/blog.css';
+
+import { getCollection, getEntry } from 'astro:content';
+
+const blogPosts = await getCollection('blog');
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+		rel="stylesheet"
+		/>
+	</head>
+	<main>
+		<h1>Blogg</h1>
+		{blogPosts.map((post) => (
+			<h2>{post.data.title}</h2>
+			<div>{post.body}</div>
+		))}
+	</main>
+</html>

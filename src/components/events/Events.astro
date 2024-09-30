@@ -12,8 +12,6 @@ const hasCurrentEvents = currentEvents.length > 0;
 const MAX_PAST_EVENTS = 2;
 
 const pastEvents = allEvents.filter(event => new Date(event.data.date) < new Date()).slice(0, MAX_PAST_EVENTS);
-
-const blogEnabled = import.meta.env.BLOG_ENABLED === "true";
 ---
 
 <div class="events">
@@ -43,6 +41,5 @@ const blogEnabled = import.meta.env.BLOG_ENABLED === "true";
         </li>
       ))}
     </ul>
-    {blogEnabled && <p>Dette er noen av våre siste arrangementer. Ta en titt på <a href="/blog">bloggen</a> vår for mer informasjon om tidligere arrangementer.</p>}
   </div>
 </div>
