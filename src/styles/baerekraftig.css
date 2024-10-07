@@ -44,6 +44,7 @@ h2 {
 
 footer {
   margin-top: var(--size-l);
+  padding-bottom: var(--size-l);
 }
 
 footer > *,
@@ -56,7 +57,7 @@ footer::after {
   margin-top: var(--size-s);
   display: block;
   /* Blogg-artikkel: https://blogg.bekk.no/digitale-utslipp-og-b%C3%A6rekraftig-utvikling-68a3ea61b93a */
-  content: 'Nåværende stil er den vi har kalt "bærekraftig". Den er forsøkt levert med så lite CSS som mulig. Selvom den mest bærekraftige nettsiden er den som aldri blir laget ;). Inspirert av  Hans Kristian Henriksen, Bekk.';
+  content: 'Nåværende stil er den vi har kalt "bærekraftig". Den er forsøkt levert med så lite CSS som mulig. Riktignok, den mest bærekraftige nettsiden er den som aldri blir laget ;)';
 }
 
 p + p {
@@ -119,4 +120,9 @@ a:not(.theme-menu a):hover {
   gap: var(--size-s);
   flex-wrap: wrap;
   text-transform: uppercase;
+}
+
+/* EVENTS */
+.events__current {
+  margin-bottom: var(--size-xs);
 }

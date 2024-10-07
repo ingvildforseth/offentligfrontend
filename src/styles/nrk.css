@@ -84,6 +84,7 @@ h2 {
 footer {
   margin-top: var(--size-l);
   padding-top: var(--size-l);
+  padding-bottom: var(--size-l);
   position: relative;
 }
 
@@ -241,4 +242,9 @@ a:not(.theme-menu a, .explanation__link-localghost):hover {
     1px 0 50px var(--text-shadow-color-two),
     1px 0 50px var(--text-shadow-color-two);
   /* TODO: Should have other signifier than color that this is a link */
+}
+
+/* EVENTS */
+.events__current {
+  margin-bottom: var(--size-xs);
 }
