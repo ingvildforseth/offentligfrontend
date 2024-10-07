@@ -69,9 +69,9 @@ html {
   background-color: var(--color-white);
   --content-bg-color: white;
   --content-border: 1px solid black;
-  cursor: url("/nrklogo.svg"), auto;
 }
 
+html,
 a:hover {
   cursor: url("/nrklogo.svg"), auto;
 }
