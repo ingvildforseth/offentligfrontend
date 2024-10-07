@@ -232,6 +232,7 @@ a:not(.theme-menu a, .explanation__link-localghost):hover {
 
 /* EXPLANATION */
 .explanation .explanation__link-localghost {
+  text-decoration: none;
   --text-color-original: oklch(90.6% 0.075 327.59);
   --text-shadow-color-one-original: oklch(75.88% 0.264 329.46);
   --text-shadow-color-two-original: oklch(67.06% 0.326 330.95);
