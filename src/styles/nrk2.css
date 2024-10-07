@@ -85,7 +85,7 @@ html:before {
 body {
   height: fit-content;
   padding-top: var(--size-l);
-  padding-bottom: var(--size-s);
+  padding-bottom: var(--size-m);
 }
 
 main {
