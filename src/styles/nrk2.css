@@ -61,14 +61,25 @@
 }
 
 html {
+  position: relative;
   /* NRK Sans Variable docs: https://static.nrk.no/nrk-sans/latest/index.html#usage */
   font-family: "NRK Sans Variable", sans-serif;
   font-weight: var(--font-weight-normal);
   font-size: 16px;
   background-color: var(--color-white);
-  background-image: url("/nrklogo-pattern.svg");
   --content-bg-color: white;
   --content-border: 1px solid black;
+}
+
+html:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("/nrklogo-pattern.svg");
 }
 
 body {
