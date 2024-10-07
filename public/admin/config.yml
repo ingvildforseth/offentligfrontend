@@ -12,3 +12,6 @@ public_folder: "src/assets/images" # The src attribute for uploaded media
 backend:
   name: git-gateway
   branch: main
+slug: { { slug } }
+site_url: https://offentlig-frontend.netlify.app
+display_url: https://offentlig-frontend.netlify.app

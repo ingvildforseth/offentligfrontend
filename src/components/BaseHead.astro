@@ -26,3 +26,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL('/logo1.svg', Astro.url)} />
+
+<!-- Netlify identity widget -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js" is:inline></script>
