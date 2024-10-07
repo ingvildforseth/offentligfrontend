@@ -26,7 +26,7 @@
 /* CUSTOMIZATION */
 
 /* OF logo */
-.theme-menu a.theme-menu__of:hover svg {
+a.theme-menu__of:hover svg {
   transform: scaleX(-1);
 }
 
@@ -42,24 +42,24 @@ Some NRK colors:
   --nrk-color-core-blue-900: #0a2343;
   --nrk-color-core-blue-950: #061629; 
 */
-.theme-menu a.theme-menu__nrk svg {
+a.theme-menu__nrk svg {
   color: #0c366c;
   font-size: 19px;
 }
 
-.theme-menu a.theme-menu__nrk:hover svg {
+a.theme-menu__nrk:hover svg {
   transform: scaleY(-1);
 }
 
 /* Baerekraftig menu item */
-.theme-menu a.theme-menu__baerekraftig {
+a.theme-menu__baerekraftig {
   display: inline-block;
   font-size: 24px;
   animation: rotate var(--duration-xl) linear infinite;
   animation-play-state: paused;
 }
 
-.theme-menu a.theme-menu__baerekraftig:hover {
+a.theme-menu__baerekraftig:hover {
   animation-play-state: running;
 }
 
