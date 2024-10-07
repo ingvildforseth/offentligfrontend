@@ -67,6 +67,7 @@ html {
   font-size: 16px;
   background-color: var(--color-white);
   background-image: url("/nrklogo2.svg");
+  --content-bg-color: white;
 }
 
 body {
@@ -75,13 +76,12 @@ body {
 
 main {
   padding: var(--size-xxxs) var(--size-s);
-  background-color: white;
   border: 1px solid black;
 }
 
 main,
 footer {
-  bakcground-color: white;
+  background-color: var(--content-bg-color);
   max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
@@ -92,7 +92,6 @@ footer {
   padding-top: var(--size-l);
   padding-bottom: var(--size-m);
   position: relative;
-  background-color: white;
 }
 
 /* footer::before {
@@ -135,7 +134,7 @@ a:not(.theme-menu a, .explanation__link-localghost):hover {
 
 /* THEME MENU  */
 .theme-menu {
-  background-color: white;
+  background-color: var(--content-bg-color);
   padding: var(--size-xxs);
   margin: var(--size-xxs) var(--size-s);
   border: 1px solid black;
