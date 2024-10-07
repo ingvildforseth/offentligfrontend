@@ -1,4 +1,5 @@
 # This config was setup using tutorial: https://www.andrijan.dev/blog/how-to-set-up-netlify-cms-with-astro/
+# The headless CMS is decap: https://decapcms.org/docs
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
