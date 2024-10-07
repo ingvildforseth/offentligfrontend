@@ -133,15 +133,13 @@ p + p {
     Correct order is LoVeHAte (Link, Visited, Hover, Active) 
     See https://forsethingvild.medium.com/helpful-css-acronyms-d16010e5dd5f#a51f
 */
-a:not(.theme-menu a, .explanation__link-localghost) {
-  text-decoration: underline;
+a:not(.explanation__link-localghost) {
   color: var(--color-black);
   transition: font-stretch var(--duration-m) ease-out;
-  font-stretch: calc(var(--nrk-sans-width-extended) * 1%);
 }
 
 a:not(.theme-menu a, .explanation__link-localghost):hover {
-  font-stretch: calc(var(--nrk-sans-width-semi-condensed) * 1%);
+  font-stretch: calc(var(--nrk-sans-width-extended) * 1%);
 }
 
 /* THEME MENU  */
@@ -151,6 +149,10 @@ a:not(.theme-menu a, .explanation__link-localghost):hover {
   margin: var(--size-xxs) var(--size-s);
   border: var(--content-border);
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.8);
+}
+
+.theme-menu a {
+  text-decoration: none;
 }
 
 .theme-menu a.theme-menu__nrk svg {
