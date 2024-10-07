@@ -124,12 +124,11 @@ p + p {
 a:not(.theme-menu a, .explanation__link-localghost) {
   text-decoration: underline;
   color: var(--color-black);
+  transition: font-stretch var(--duration-m) ease-out;
 }
 
 a:not(.theme-menu a, .explanation__link-localghost):hover {
-  animation: link-anim var(--duration-sm) linear;
   font-stretch: calc(var(--nrk-sans-width-ultra-extended) * 0.65%);
-  transition: font-stretch var(--duration-s) ease-out;
 }
 
 /* THEME MENU  */
