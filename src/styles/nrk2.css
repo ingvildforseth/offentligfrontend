@@ -68,6 +68,7 @@ html {
   background-color: var(--color-white);
   background-image: url("/nrklogo-pattern.svg");
   --content-bg-color: white;
+  --content-border: 1px solid black;
 }
 
 body {
@@ -75,8 +76,8 @@ body {
 }
 
 main {
-  padding: var(--size-xxxs) var(--size-s);
-  border: 1px solid black;
+  padding-top: var(--size-xxxs);
+  border-top: var(--content-border);
 }
 
 main,
@@ -85,25 +86,18 @@ footer {
   max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
+  border-right: var(--content-border);
+  border-left: var(--content-border);
+  padding-right: var(--size-s);
+  padding-left: var(--size-s);
 }
 
 footer {
   margin-bottom: var(--size-l);
   padding-top: var(--size-l);
   padding-bottom: var(--size-m);
-  position: relative;
+  border-bottom: var(--content-border);
 }
-
-/* footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 50%;
-  border-top: 2px dotted var(--color-primary-medium);
-  margin: 0 auto;
-} */
 
 h1,
 h2 {
